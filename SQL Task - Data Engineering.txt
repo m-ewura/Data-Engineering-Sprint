@@ -138,12 +138,12 @@ Possible answers
 27. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
 Possible answers
 --SELECT DISTINCT "PlaylistId", COUNT("TrackId") FROM "PlaylistTrack" GROUP BY "PlaylistId"
+PS: If innerjoin, I get errors when specifying columns with their table names
 
 
 28. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
 Possible answers
 --SELECT "Name", "AlbumId", "MediaTypeId", "GenreId" FROM "Track" GROUP BY "Name", "AlbumId", "MediaTypeId", "GenreId"
-PS: If innerjoin, I get errors when specifying columns with their table names
 
 
 29. Provide a query that shows all Invoices but includes the # of invoice line items.
