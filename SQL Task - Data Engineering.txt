@@ -144,12 +144,12 @@ PS: If innerjoin, I get errors when specifying columns with their table names
 28. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
 Possible answers
 --SELECT "Name", "AlbumId", "MediaTypeId", "GenreId" FROM "Track" GROUP BY "Name", "AlbumId", "MediaTypeId", "GenreId"
+PS: If innerjoin, I get errors when specifying columns with their table names
 
 
 29. Provide a query that shows all Invoices but includes the # of invoice line items.
 Possible answers
 --SELECT "Quantity", * FROM "Invoice" CROSS JOIN "InvoiceLine"
-PS: If innerjoin, I get errors when specifying columns with their table names
 
 
 30. Provide a query that shows the total sales made by each sales agent.
@@ -188,7 +188,7 @@ Possible answers
 
 
 37. Provide a query that shows the top 5 most purchased tracks overall.
---SELECT "Name", COUNT("InvoiceId") as "No. of Invoices", SUM("Total") as "TotalCost" FROM "Track" CROSS JOIN "Invoice" GROUP BY "Name" ORDER BY "TotalCost" DESC LIMIT 5
+--SELECT "Name", COUNT("InvoiceId") as "No. of Invoices", SUM("Total") as "TotalCost" FROM "Track" CROSS JOIN "Invoice" GROUP BY "Name" ORDER BY "TotalCost" DESC 5
 
 
 38. Provide a query that shows the top 3 best selling artists.
