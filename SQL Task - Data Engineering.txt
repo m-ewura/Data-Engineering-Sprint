@@ -188,7 +188,7 @@ Possible answers
 
 
 37. Provide a query that shows the top 5 most purchased tracks overall.
---SELECT "Name", COUNT("InvoiceId") as "No. of Invoices", SUM("Total") as "TotalCost" FROM "Track" CROSS JOIN "Invoice" GROUP BY "Name" ORDER BY "TotalCost" DESC 5
+--SELECT "Name", COUNT("InvoiceId") as "No. of Invoices", SUM("Total") as "TotalCost" FROM "Track" CROSS JOIN "Invoice" GROUP BY "Name" ORDER BY "TotalCost" DESC LIMIT 5
 
 
 38. Provide a query that shows the top 3 best selling artists.
