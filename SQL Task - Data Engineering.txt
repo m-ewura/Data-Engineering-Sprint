@@ -1,0 +1,208 @@
+﻿DOWNLOAD SCRIPT # https://drive.google.com/file/d/1THUQdlrATDZDYP_cvilnBWbJuep-O1Um/view?usp=sharing
+
+
+1. What is the title of the album with AlbumId 67?
+Possible answers
+--SELECT "Title" FROM "Album" WHERE "AlbumId"=67
+
+
+2. Find the name and length (in seconds) of all tracks that have lengths between 50 and 70 seconds.
+Possible answers
+--SELECT "Name", "Milliseconds" as "Seconds" FROM "Track" WHERE "Milliseconds" BETWEEN 50 * 1000 AND 70 *1000
+
+
+3. List all the albums by artists with the word ‘black’ in their name.
+Possible answers
+--SELECT "Title" FROM "Album" UNION SELECT "Name" FROM "Artist" WHERE "Name" LIKE '%Black%'
+
+
+4. Provide a query showing a unique/distinct list of billing countries from the Invoice table.
+Possible answers
+--SELECT DISTINCT "BillingCountry" FROM "Invoice"
+
+
+5. Display the city with the highest sum total invoice.
+Possible answers
+--SELECT "BillingCity", SUM("Total") as "Highest Invoice" FROM "Invoice" GROUP BY "BillingCity" ORDER BY "Highest Invoice" DESC LIMIT 1
+
+
+6. Produce a table that lists each country and the number of customers in that country. (You only need to include countries that have customers) in descending order. (Highest count at the top)
+Possible answers
+--SELECT "Country", COUNT("CustomerId") as "No. of Customers" FROM "Customer" WHERE "Country" IS NOT NULL GROUP BY "Country" ORDER BY "No. of Customers" DESC
+
+
+7. Find the top five customers in terms of sales i.e. find the five customers whose total combined invoice amounts are the highest. Give their name, CustomerId and total invoice amount.
+Possible answers
+--SELECT ("FirstName", "LastName") as "Name", SUM("Total") as "Cost" FROM "Invoice" CROSS JOIN "Customer" GROUP BY "Name" ORDER BY "Cost" DESC LIMIT 5
+PS: If innerjoin, I get errors when specifying columns with their table names
+
+
+8. Find out the state-wise count of customerID and list the names of states with the count of customerID in decreasing order. Note:- do not include where states isnull value.
+Possible answers
+--SELECT COUNT("CustomerId") as "No. of Customers", "State" FROM "Customer" WHERE "State" IS NOT NULL GROUP BY "State" ORDER BY "No. of Customers" DESC
+
+
+9. How many Invoices were there in 2009 and 2011?
+Possible answers
+--SELECT COUNT("InvoiceDate") as TotalInvoive2009 FROM "Invoice" WHERE "InvoiceDate" >= '2009-01-01' AND "InvoiceDate" < '2010-01-01'
+--SELECT COUNT("InvoiceDate") as TotalInvoice2011 FROM "Invoice" WHERE "InvoiceDate" >= '2011-01-01' AND "InvoiceDate" < '2012-01-01'
+
+
+10. Provide a query showing only the Employees who are Sales Agents.
+Possible answers
+--SELECT * FROM "Employee" WHERE "Title" LIKE '%Sales Support Agent%'
+
+
+11. What was the invoice date for invoice ID 315?
+Possible answers
+--SELECT "InvoiceDate" FROM "Invoice" WHERE "InvoiceId" = '315'
+
+
+12. Find all the invoices from the billing city Brasília, Edmonton, and Vancouver and sort in descending order by invoice ID.
+Possible answers
+--SELECT * FROM "Invoice" WHERE "BillingCity" = ANY('{Edmonton, Vancouver}') OR "BillingCity" LIKE '%Bras%' ORDER BY "InvoiceId" DESC
+--SELECT * FROM "Invoice" WHERE "BillingCity" IN ('Edmonton', 'Vancouver') OR "BillingCity" LIKE '%Bras%' ORDER BY "InvoiceId" DESC
+
+
+13. Find all the customer emails that start with "J" and are from gmail.com.
+Possible answers
+--SELECT * FROM "Customer" WHERE "Email" LIKE '%j%' AND "Email" LIKE '%gmail.com%'
+
+
+14. Provide a query showing Customers (just their full names, customer ID and country) who are not in the US.
+Possible Answers
+--SELECT "CustomerId", ("FirstName", "LastName") as "FullName", "Country" FROM "Customer" WHERE "Country" NOT IN ('USA')
+
+
+15. Provide a query only showing the Customers from Brazil.
+Possible answers
+--SELECT * FROM "Customer" WHERE "Country" IN ('Brazil')
+
+
+16. Provide a query showing the Invoices of customers who are from Brazil. The resultant table should show the customer's full name, Invoice ID, Date of the invoice and billing country.
+Possible answers
+--SELECT ("FirstName", "LastName") as "FullName", "InvoiceId", "InvoiceDate", "BillingCountry" FROM "Invoice" CROSS JOIN "Customer" WHERE "BillingCountry" IN ('Brazil')
+
+
+17. Provide a query showing only the Employees who are Sales Agents.
+Possible answers
+Question 10
+
+
+18. Provide a query showing a unique list of billing countries from the Invoice table.
+Possible answers
+Question 4
+
+
+19. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
+Possible answers
+--SELECT DISTINCT "CustomerId", "InvoiceId", "InvoiceDate", ("FirstName", "LastName") as "FullName" FROM "Employee" CROSS JOIN "Invoice" WHERE "Title" IN ('Sales Support Agent')
+
+
+20. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
+Possible answers
+--SELECT "Total", ("FirstName", "LastName") as "CustomerName", "Country" FROM "Invoice" CROSS JOIN "Customer"
+PS: I GET INNER JOIN ERROR SPECIFYING COLUMNS with their TABLE NAMES
+
+
+21. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
+Possible answers
+Question 9
+
+
+22. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
+Possible answers
+--SELECT COUNT("Quantity") FROM "InvoiceLine" WHERE "InvoiceId" = 37
+
+
+23. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice.
+Possible answers
+--SELECT DISTINCT "InvoiceId", COUNT("Quantity") as "LineItems" FROM "InvoiceLine" GROUP BY "InvoiceId" ORDER BY "LineItems" DESC
+
+
+24. Provide a query that includes the track name with each invoice line item.
+Possible answers
+--SELECT "InvoiceId", "Name", COUNT("Quantity") as "LineItems" FROM "InvoiceLine" CROSS JOIN "Track" GROUP BY "InvoiceId", "Name" ORDER BY "LineItems" DESC
+
+
+25. Provide a query that includes the purchased track name AND artist name with each invoice line item.
+Possible answers
+--SELECT DISTINCT "Name", "TrackId", COUNT("Quantity") as "LineItems" FROM "InvoiceLine" CROSS JOIN "Artist" GROUP BY "TrackId", "Name" ORDER BY "LineItems" DESC
+
+
+26. Provide a query that shows the # of invoices per country.
+Possible answers
+--SELECT DISTINCT "BillingCountry", COUNT("InvoiceId") FROM "Invoice" GROUP BY "BillingCountry"
+
+
+27. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
+Possible answers
+--SELECT DISTINCT "PlaylistId", COUNT("TrackId") FROM "PlaylistTrack" GROUP BY "PlaylistId"
+
+
+28. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
+Possible answers
+--SELECT "Name", "AlbumId", "MediaTypeId", "GenreId" FROM "Track" GROUP BY "Name", "AlbumId", "MediaTypeId", "GenreId"
+PS: If innerjoin, I get errors when specifying columns with their table names
+
+
+29. Provide a query that shows all Invoices but includes the # of invoice line items.
+Possible answers
+--SELECT "Quantity", * FROM "Invoice" CROSS JOIN "InvoiceLine"
+PS: If innerjoin, I get errors when specifying columns with their table names
+
+
+30. Provide a query that shows the total sales made by each sales agent.
+Possible answers
+--SELECT DISTINCT "FirstName", SUM("InvoiceId") as "AllInvoices", SUM("Total") as "TotalSales" FROM "Employee" CROSS JOIN "Invoice" WHERE "Title" IN ('Sales Support Agent') GROUP BY "FirstName"
+
+
+31. Which sales agent made the most in sales in 2009?
+Possible answers
+--SELECT DISTINCT "FirstName", SUM("InvoiceId") as "Invoices2009", SUM("Total") as "TotalSales" FROM "Employee" CROSS JOIN "Invoice" WHERE "Title" IN ('Sales Support Agent') AND "InvoiceDate" >= '2009-01-01' AND "InvoiceDate" < '2010-01-01' GROUP BY "FirstName" ORDER BY "TotalSales" DESC LIMIT 1
+
+
+32. Which sales agent made the most in sales in 2010?
+Possible answers
+--SELECT DISTINCT "FirstName", SUM("InvoiceId") as "Invoices2010", SUM("Total") as "TotalSales" FROM "Employee" CROSS JOIN "Invoice" WHERE "Title" IN ('Sales Support Agent') AND "InvoiceDate" >= '2010-01-01' AND "InvoiceDate" < '2011-01-01' GROUP BY "FirstName" ORDER BY "TotalSales" DESC LIMIT 1
+
+
+33. Which sales agent made the most in sales overall?
+Possible answers
+--SELECT DISTINCT "FirstName", SUM("InvoiceId") as "AllInvoices", SUM("Total") as "TotalSales" FROM "Employee" CROSS JOIN "Invoice" WHERE "Title" IN ('Sales Support Agent') GROUP BY "FirstName" ORDER BY "TotalSales" DESC LIMIT 1
+
+
+34. Provide a query that shows the # of customers assigned to each sales agent.
+Possible answers
+--SELECT DISTINCT "FirstName", COUNT("CustomerId") as "No. of Customers" FROM "Employee" CROSS JOIN "Invoice" WHERE "Title" IN ('Sales Support Agent') GROUP BY "FirstName"
+
+
+35. Provide a query that shows the total sales per country. Which country's customers spent the most?
+Possible answers
+--SELECT "BillingCountry",  SUM("Total") as "TotalCost" FROM "Invoice" GROUP BY "BillingCountry" ORDER BY "TotalCost" DESC --LIMIT 1
+
+
+36. Provide a query that shows the most purchased track of 2013.
+Possible answers
+--SELECT "Name", COUNT("InvoiceId") as "No. of Invoices2013", SUM("Total") as "TotalCost" FROM "Track" CROSS JOIN "Invoice" WHERE "InvoiceDate" >= '2013-01-01' AND "InvoiceDate" < '2014-01-01' GROUP BY "Name" ORDER BY "TotalCost" DESC LIMIT 6
+
+
+37. Provide a query that shows the top 5 most purchased tracks overall.
+--SELECT "Name", COUNT("InvoiceId") as "No. of Invoices", SUM("Total") as "TotalCost" FROM "Track" CROSS JOIN "Invoice" GROUP BY "Name" ORDER BY "TotalCost" DESC 5
+
+
+38. Provide a query that shows the top 3 best selling artists.
+Possible answers
+--SELECT "ArtistId", COUNT("AlbumId") as "No. of Albums", SUM("Total") as "TotalCost" FROM "Album" CROSS JOIN "Invoice" GROUP BY "ArtistId" ORDER BY "TotalCost" DESC;
+--SELECT "Name" FROM "Artist" WHERE "ArtistId" = ANY('{90, 22, 58}');
+
+
+39. Provide a query that shows the most purchased Media Type.
+Possible answers
+--SELECT "Name", SUM("Total") as "TotalCost" FROM "MediaType" CROSS JOIN "Invoice" GROUP BY "Name" ORDER BY "TotalCost" DESC LIMIT 1
+
+
+40. Provide a query that shows the number of tracks purchased in all invoices that contain more than one genre.
+Possible answers
+--SELECT COUNT("TrackId"), SUM("Total") as "TotalCost" FROM "Track" CROSS JOIN "Invoice" ORDER BY "TotalCost" DESC
+PS: Not sure
