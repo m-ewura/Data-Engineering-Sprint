@@ -33,8 +33,7 @@ Possible answers
 
 7. Find the top five customers in terms of sales i.e. find the five customers whose total combined invoice amounts are the highest. Give their name, CustomerId and total invoice amount.
 Possible answers
---SELECT ("FirstName", "LastName") as "Name", SUM("Total") as "Cost" FROM "Invoice" CROSS JOIN "Customer" GROUP BY "Name" ORDER BY "Cost" DESC LIMIT 5
-PS: If innerjoin, I get errors when specifying columns with their table names
+--SELECT ("FirstName", "LastName") as "Name", i."CustomerId", COUNT("InvoiceId") as "CustomerInvoices", SUM("Total") as "Cost" FROM "Invoice" as i INNER JOIN "Customer"c on i."CustomerId" = c."CustomerId" GROUP BY "Name", i."CustomerId" ORDER BY "Cost" DESC LIMIT 5
 
 
 8. Find out the state-wise count of customerID and list the names of states with the count of customerID in decreasing order. Note:- do not include where states isnull value.
@@ -137,14 +136,12 @@ Possible answers
 
 27. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
 Possible answers
---SELECT DISTINCT "PlaylistId", COUNT("TrackId") FROM "PlaylistTrack" GROUP BY "PlaylistId"
-PS: If innerjoin, I get errors when specifying columns with their table names
+--SELECT pt."PlaylistId", p."Name", COUNT("TrackId") as "No. of Tracks" FROM "PlaylistTrack" as pt INNER JOIN "Playlist" p on p."PlaylistId" = pt."PlaylistId" GROUP BY pt."PlaylistId", p."Name"
 
 
 28. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
 Possible answers
---SELECT "Name", "AlbumId", "MediaTypeId", "GenreId" FROM "Track" GROUP BY "Name", "AlbumId", "MediaTypeId", "GenreId"
-PS: If innerjoin, I get errors when specifying columns with their table names
+--SELECT t."Name" as "TrackName", a."Title" as "AlbumTitle", m."Name" as "MediaType", g."Name" as "Genre" FROM "Track" as t INNER JOIN "Album" a on t."AlbumId" = a."AlbumId" INNER JOIN "MediaType" m on t."MediaTypeId" = m."MediaTypeId" INNER JOIN "Genre" g on t."GenreId" = g."GenreId" GROUP BY "TrackName", "AlbumTitle", "MediaType", "Genre"
 
 
 29. Provide a query that shows all Invoices but includes the # of invoice line items.
