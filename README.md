@@ -7,23 +7,28 @@
 * Create Table <> and column names equal to columns in .csv file
 * Copy data from .csv using command:
 >    --COPY <tablename ?(specify-columns)> FROM '<path-to-csvfile>' DELIMITERS ',' CSV
-*** Warning: Copy cmd updates the db anytime it's run. Run once or more to generate extra rows. ***
+
+_Warning: Copy cmd updates the db anytime it's run. Run once or more to generate extra rows._
 
 #### Transfering data from public schema to any other 
 * Create new schema and populate tables from "public"
 >    --ALTER TABLE <> SET SCHEMA <>
 
 #### Changing search path to simplify queries
-* --SHOW search_path;
+> --SHOW search_path;
+
     * If public exists: change search_path to new schema, public
     * If drop public: change search_path to new schema
+
 >    --SET search_path TO <schemaname>;
+
 * Try queries
+
 
 #### Github commit message requirements
 * Sending pull requests
-    * if _update_: -m "patch: "
-    * if _add_: -m "feat: "
-    * if _fix_: -m "fix: "
+    * _if update_: __-m "patch: "__
+    * _if add_: __-m "feat: "__
+    * _if fix_: __-m "fix: "__
 
 
