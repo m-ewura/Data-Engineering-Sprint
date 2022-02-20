@@ -203,3 +203,4 @@ Possible answers
 Possible answers
 --SELECT COUNT("TrackId"), SUM("Total") as "TotalCost" FROM "Track" CROSS JOIN "Invoice" ORDER BY "TotalCost" DESC
 PS: Not sure
+--SELECT i."InvoiceId" as "InvoiceNumber", SUM("Quantity") as "TotalTracks", COUNT(DISTINCT g."Name") as "TotalGenres" FROM "Invoice" as i JOIN "InvoiceLine"il ON il."InvoiceId" = i."InvoiceId" JOIN "Track"t ON t."TrackId" = il."TrackId" JOIN "Genre"g ON g."GenreId" = t."GenreId" GROUP BY "InvoiceNumber"
