@@ -40,6 +40,31 @@ print(dataengineeringjobs)
 dataengineeringjobs.to_csv("dataengineeringjobs.csv", index=False)
 
 
+## If results are not of same length, use instead:
+# dataengineeringjobs = {
+#     "Title": detitle,
+#     "Short Description": desdesc,
+#     "Salary": desal,
+#     "Location": deloc,
+#     "Company Name": deconame
+# }
+
+# df = pd.DataFrame.from_dict(dataengineeringjobs, orient='index')
+# df = df.transpose()
+# print(df)
+
+## to remove "\n" from results, add to code:
+# df = df.replace('\n',' ', regex=True)
+
+
+
+"""Test if indeed.py can be scheduled to run at date created"""
+from datetime import datetime
+now = datetime(2022, 2, 13, 14, 48) # date indeed jobs was extracted
+dfs = dataengineeringjobs
+
+with open('ischedule/indeed.txt', 'a')as f:
+    f.write('{} : \n Output {}\n'.format(now, dfs))
 
 
 

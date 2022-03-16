@@ -6,7 +6,7 @@
 #### Getting Data from a .csv file
 * Create Table <> and column names equal to columns in .csv file
 * Copy data from .csv using command:
->    --COPY <tablename ?(specify-columns)> FROM '<path-to-csvfile>' DELIMITERS ',' CSV
+>    --COPY <tablename ?(specify-columns)> FROM <path-to-csvfile> DELIMITERS ',' CSV
 
 _Warning: Copy cmd updates the db anytime it's run. Run once or more to generate extra rows._
 
