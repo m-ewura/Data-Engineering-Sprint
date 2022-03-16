@@ -1,0 +1,19 @@
+2022-02-13 14:48:00 : 
+ Output                               Title  ...      Company Name
+0                  newData Engineer  ...        Corestream
+1    newSr. Data Engineer - Alteryx  ...    Charles Schwab
+2                  newData Engineer  ...          Dispatch
+3             newQRT] Data Engineer  ...            Luxoft
+4    newData Engineer (100% Remote)  ...   Piper Companies
+5               newData Engineer II  ...            Rapid7
+6                  newData Engineer  ...             IDEXX
+7         newData Engineer (Remote)  ...          Thrivent
+8           newSenior Data Engineer  ...          Bidscale
+9               newData Engineer II  ...   Discovery, Inc.
+10  newData Engineer (Data Science)  ...      HotSchedules
+11          newSenior Data Engineer  ...            Cadent
+12           newCloud Data Engineer  ...  The Data Sherpas
+13                 newData Engineer  ...     GXO Logistics
+14        newData Engineer (Remote)  ...         pulseData
+
+[15 rows x 5 columns]
