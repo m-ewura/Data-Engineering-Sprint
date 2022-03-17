@@ -1,0 +1,76 @@
+2022-03-17 11:49:21.628839 : 
+ Output                                    Title  ...                                 Company Name
+0          newData Engineer + Apprentice  ...                           New Apprenticeship
+1         newData Engineer (100% Remote)  ...                              Piper Companies
+2                       newData Engineer  ...                                   Corestream
+3          newData Engineer - Dallas, TX  ...                                     Dispatch
+4            newData Engineer (Starlink)  ...                                       SpaceX
+5   newSr. Data Engineer, Title Insights  ...                                      Netflix
+6                       newData Engineer  ...                                   Involve.ai
+7                newRemote Data Engineer  ...  Pinnacle Group Workplace Solutions Provider
+8         newSr. Data Engineer - Alteryx  ...                               Charles Schwab
+9                       newData Engineer  ...                                   Leaf Group
+10                 newQRT] Data Engineer  ...                                       Luxoft
+11                      newData Engineer  ...                                         Nike
+12               newSenior Data Engineer  ...                        The Coca-Cola Company
+13             newData Engineer (Remote)  ...                                    pulseData
+14                   newData Engineer II  ...          Milwaukee Electric Tool Corporation
+
+[15 rows x 5 columns]
+2022-03-17 11:51:17.852314 : 
+ Output                                    Title  ...                                 Company Name
+0          newData Engineer + Apprentice  ...                           New Apprenticeship
+1         newData Engineer (100% Remote)  ...                              Piper Companies
+2                       newData Engineer  ...                                   Corestream
+3          newData Engineer - Dallas, TX  ...                                     Dispatch
+4            newData Engineer (Starlink)  ...                                       SpaceX
+5   newSr. Data Engineer, Title Insights  ...                                      Netflix
+6                       newData Engineer  ...                                   Involve.ai
+7                newRemote Data Engineer  ...  Pinnacle Group Workplace Solutions Provider
+8                       newData Engineer  ...                    JPMorgan Chase Bank, N.A.
+9                  newQRT] Data Engineer  ...                                       Luxoft
+10                      newData Engineer  ...                                         Nike
+11               newSenior Data Engineer  ...                        The Coca-Cola Company
+12             newData Engineer (Remote)  ...                                    pulseData
+13                   newData Engineer II  ...          Milwaukee Electric Tool Corporation
+14                   newData Engineer II  ...                              Discovery, Inc.
+
+[15 rows x 5 columns]
+2022-03-17 11:51:54.997446 : 
+ Output                                    Title  ...                                 Company Name
+0          newData Engineer + Apprentice  ...                           New Apprenticeship
+1         newData Engineer (100% Remote)  ...                              Piper Companies
+2                       newData Engineer  ...                                   Corestream
+3          newData Engineer - Dallas, TX  ...                                     Dispatch
+4            newData Engineer (Starlink)  ...                                       SpaceX
+5   newSr. Data Engineer, Title Insights  ...                                      Netflix
+6                       newData Engineer  ...                                   Involve.ai
+7                newRemote Data Engineer  ...  Pinnacle Group Workplace Solutions Provider
+8                       newData Engineer  ...                    JPMorgan Chase Bank, N.A.
+9                  newQRT] Data Engineer  ...                                       Luxoft
+10                      newData Engineer  ...                                         Nike
+11               newSenior Data Engineer  ...                        The Coca-Cola Company
+12             newData Engineer (Remote)  ...                                    pulseData
+13                   newData Engineer II  ...          Milwaukee Electric Tool Corporation
+14                   newData Engineer II  ...                              Discovery, Inc.
+
+[15 rows x 5 columns]
+2022-03-17 11:53:11.949820 : 
+ Output                                    Title  ...                                 Company Name
+0          newData Engineer + Apprentice  ...                           New Apprenticeship
+1         newData Engineer (100% Remote)  ...                              Piper Companies
+2                       newData Engineer  ...                                   Corestream
+3          newData Engineer - Dallas, TX  ...                                     Dispatch
+4            newData Engineer (Starlink)  ...                                       SpaceX
+5   newSr. Data Engineer, Title Insights  ...                                      Netflix
+6                       newData Engineer  ...                                   Involve.ai
+7         newSr. Data Engineer - Alteryx  ...                               Charles Schwab
+8                  newQRT] Data Engineer  ...                                       Luxoft
+9                       newData Engineer  ...                                         Nike
+10               newSenior Data Engineer  ...                        The Coca-Cola Company
+11             newData Engineer (Remote)  ...                                    pulseData
+12                   newData Engineer II  ...          Milwaukee Electric Tool Corporation
+13               newRemote Data Engineer  ...  Pinnacle Group Workplace Solutions Provider
+14                   newData Engineer II  ...                              Discovery, Inc.
+
+[15 rows x 5 columns]

@@ -68,6 +68,12 @@ with open('ischedule/indeed.txt', 'a')as f:
 
 
 
+"""Watch for changes in data using datetime.now"""
+now = datetime.now()
+dff = dataengineeringjobs
+
+with open('ischedule/indeednow.txt', 'a')as f:
+    f.write('{} : \n Output {}\n'.format(now, dff))
 
 
 
