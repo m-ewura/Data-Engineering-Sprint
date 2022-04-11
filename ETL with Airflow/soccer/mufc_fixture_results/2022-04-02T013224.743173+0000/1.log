@@ -1,0 +1,66 @@
+[2022-04-02 01:32:32,551] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: soccer.mufc_fixture_results manual__2022-04-02T01:32:24.743173+00:00 [queued]>
+[2022-04-02 01:32:32,565] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: soccer.mufc_fixture_results manual__2022-04-02T01:32:24.743173+00:00 [queued]>
+[2022-04-02 01:32:32,566] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-02 01:32:32,566] {taskinstance.py:1244} INFO - Starting attempt 1 of 4
+[2022-04-02 01:32:32,566] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-02 01:32:32,714] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): mufc_fixture_results> on 2022-04-02 01:32:24.743173+00:00
+[2022-04-02 01:32:32,786] {standard_task_runner.py:52} INFO - Started process 25765 to run task
+[2022-04-02 01:32:32,793] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'soccer', 'mufc_fixture_results', 'manual__2022-04-02T01:32:24.743173+00:00', '--job-id', '176', '--raw', '--subdir', 'DAGS_FOLDER/sports.py', '--cfg-path', '/tmp/tmphgucejij', '--error-file', '/tmp/tmp_g0be1dz']
+[2022-04-02 01:32:32,794] {standard_task_runner.py:77} INFO - Job 176: Subtask mufc_fixture_results
+[2022-04-02 01:32:33,057] {logging_mixin.py:109} INFO - Running <TaskInstance: soccer.mufc_fixture_results manual__2022-04-02T01:32:24.743173+00:00 [running]> on host J-E-Godwyll.localdomain
+[2022-04-02 01:32:33,481] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=mymahmj@gmail.com
+AIRFLOW_CTX_DAG_OWNER=ewurabapotez
+AIRFLOW_CTX_DAG_ID=soccer
+AIRFLOW_CTX_TASK_ID=mufc_fixture_results
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-02T01:32:24.743173+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-02T01:32:24.743173+00:00
+[2022-04-02 01:32:33,482] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-02 01:32:33,483] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'soccer --team=MUFC']
+[2022-04-02 01:32:33,491] {subprocess.py:85} INFO - Output:
+[2022-04-02 01:32:35,252] {subprocess.py:89} INFO - 2021-08-14	Manchester United FC        5  vs  1            Leeds United FC
+[2022-04-02 01:32:35,252] {subprocess.py:89} INFO - 2021-08-22	Southampton FC              1  vs  1       Manchester United FC
+[2022-04-02 01:32:35,253] {subprocess.py:89} INFO - 2021-08-29	Wolverhampton Wanderers FC  0  vs  1       Manchester United FC
+[2022-04-02 01:32:35,253] {subprocess.py:89} INFO - 2021-09-11	Manchester United FC        4  vs  1        Newcastle United FC
+[2022-04-02 01:32:35,254] {subprocess.py:89} INFO - 2021-09-14	BSC Young Boys              2  vs  1       Manchester United FC
+[2022-04-02 01:32:35,254] {subprocess.py:89} INFO - 2021-09-19	West Ham United FC          1  vs  2       Manchester United FC
+[2022-04-02 01:32:35,255] {subprocess.py:89} INFO - 2021-09-25	Manchester United FC        0  vs  1             Aston Villa FC
+[2022-04-02 01:32:35,255] {subprocess.py:89} INFO - 2021-09-29	Manchester United FC        2  vs  1              Villarreal CF
+[2022-04-02 01:32:35,256] {subprocess.py:89} INFO - 2021-10-02	Manchester United FC        1  vs  1                 Everton FC
+[2022-04-02 01:32:35,256] {subprocess.py:89} INFO - 2021-10-16	Leicester City FC           4  vs  2       Manchester United FC
+[2022-04-02 01:32:35,257] {subprocess.py:89} INFO - 2021-10-20	Manchester United FC        3  vs  2                Atalanta BC
+[2022-04-02 01:32:35,257] {subprocess.py:89} INFO - 2021-10-24	Manchester United FC        0  vs  5               Liverpool FC
+[2022-04-02 01:32:35,258] {subprocess.py:89} INFO - 2021-10-30	Tottenham Hotspur FC        0  vs  3       Manchester United FC
+[2022-04-02 01:32:35,258] {subprocess.py:89} INFO - 2021-11-02	Atalanta BC                 2  vs  2       Manchester United FC
+[2022-04-02 01:32:35,259] {subprocess.py:89} INFO - 2021-11-06	Manchester United FC        0  vs  2         Manchester City FC
+[2022-04-02 01:32:35,259] {subprocess.py:89} INFO - 2021-11-20	Watford FC                  4  vs  1       Manchester United FC
+[2022-04-02 01:32:35,260] {subprocess.py:89} INFO - 2021-11-23	Villarreal CF               0  vs  2       Manchester United FC
+[2022-04-02 01:32:35,260] {subprocess.py:89} INFO - 2021-11-28	Chelsea FC                  1  vs  1       Manchester United FC
+[2022-04-02 01:32:35,261] {subprocess.py:89} INFO - 2021-12-02	Manchester United FC        3  vs  2                 Arsenal FC
+[2022-04-02 01:32:35,261] {subprocess.py:89} INFO - 2021-12-05	Manchester United FC        1  vs  0          Crystal Palace FC
+[2022-04-02 01:32:35,262] {subprocess.py:89} INFO - 2021-12-08	Manchester United FC        1  vs  1             BSC Young Boys
+[2022-04-02 01:32:35,262] {subprocess.py:89} INFO - 2021-12-11	Norwich City FC             0  vs  1       Manchester United FC
+[2022-04-02 01:32:35,263] {subprocess.py:89} INFO - 2021-12-27	Newcastle United FC         1  vs  1       Manchester United FC
+[2022-04-02 01:32:35,263] {subprocess.py:89} INFO - 2021-12-30	Manchester United FC        3  vs  1                 Burnley FC
+[2022-04-02 01:32:35,263] {subprocess.py:89} INFO - 2022-01-03	Manchester United FC        0  vs  1 Wolverhampton Wanderers FC
+[2022-04-02 01:32:35,264] {subprocess.py:89} INFO - 2022-01-15	Aston Villa FC              2  vs  2       Manchester United FC
+[2022-04-02 01:32:35,264] {subprocess.py:89} INFO - 2022-01-19	Brentford FC                1  vs  3       Manchester United FC
+[2022-04-02 01:32:35,265] {subprocess.py:89} INFO - 2022-01-22	Manchester United FC        1  vs  0         West Ham United FC
+[2022-04-02 01:32:35,265] {subprocess.py:89} INFO - 2022-02-08	Burnley FC                  1  vs  1       Manchester United FC
+[2022-04-02 01:32:35,266] {subprocess.py:89} INFO - 2022-02-12	Manchester United FC        1  vs  1             Southampton FC
+[2022-04-02 01:32:35,266] {subprocess.py:89} INFO - 2022-02-15	Manchester United FC        2  vs  0  Brighton & Hove Albion FC
+[2022-04-02 01:32:35,267] {subprocess.py:89} INFO - 2022-02-20	Leeds United FC             2  vs  4       Manchester United FC
+[2022-04-02 01:32:35,267] {subprocess.py:89} INFO - 2022-02-23	Club Atlético de Madrid     1  vs  1       Manchester United FC
+[2022-04-02 01:32:35,268] {subprocess.py:89} INFO - 2022-02-26	Manchester United FC        0  vs  0                 Watford FC
+[2022-04-02 01:32:35,268] {subprocess.py:89} INFO - 2022-03-06	Manchester City FC          4  vs  1       Manchester United FC
+[2022-04-02 01:32:35,268] {subprocess.py:89} INFO - 2022-03-12	Manchester United FC        3  vs  2       Tottenham Hotspur FC
+[2022-04-02 01:32:35,269] {subprocess.py:89} INFO - 2022-03-15	Manchester United FC        0  vs  1    Club Atlético de Madrid
+[2022-04-02 01:32:35,269] {subprocess.py:89} INFO - /usr/local/lib/python3.8/dist-packages/requests-2.20.0-py3.8.egg/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (1.25.8) or chardet (3.0.4) doesn't match a supported version!
+[2022-04-02 01:32:35,270] {subprocess.py:89} INFO -   warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+[2022-04-02 01:32:35,286] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-04-02 01:32:35,588] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=soccer, task_id=mufc_fixture_results, execution_date=20220402T013224, start_date=20220402T013232, end_date=20220402T013235
+[2022-04-02 01:32:35,740] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-02 01:32:35,787] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
